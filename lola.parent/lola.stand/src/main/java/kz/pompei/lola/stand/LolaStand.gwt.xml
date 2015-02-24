@@ -1,4 +1,9 @@
 <module>
   <inherits name='com.google.gwt.user.User' />
+
+  <source path='impl' />
+
   <entry-point class='kz.pompei.lola.stand.impl.MainStandEP' />
+
+  <add-linker name="xsiframe" />
 </module>

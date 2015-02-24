@@ -7,6 +7,6 @@ public class MainStandEP implements EntryPoint {
   
   @Override
   public void onModuleLoad() {
-    Window.alert("Hello from Lolla Stand");
+    Window.alert("Hello from Lolla Stand WOW");
   }
 }

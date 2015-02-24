@@ -11,6 +11,8 @@ eclipse {
 }
 
 dependencies {
+  compile project(':lola.client')
+  
   compile "com.google.gwt:gwt-user:${gwtVersion}"
   compile "com.google.gwt:gwt-dev:${gwtVersion}"
   

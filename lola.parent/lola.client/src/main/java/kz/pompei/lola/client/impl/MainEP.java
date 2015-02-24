@@ -1,3 +1,8 @@
 package kz.pompei.lola.client.impl;
 
-public class MainEP {}
+import com.google.gwt.core.client.EntryPoint;
+
+public class MainEP implements EntryPoint {
+  @Override
+  public void onModuleLoad() {}
+}

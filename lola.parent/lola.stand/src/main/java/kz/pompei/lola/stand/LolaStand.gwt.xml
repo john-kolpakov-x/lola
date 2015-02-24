@@ -1,5 +1,5 @@
 <module>
-  <inherits name='com.google.gwt.user.User' />
+  <inherits name='kz.pompei.lola.client.MainLib' />
 
   <source path='impl' />
 

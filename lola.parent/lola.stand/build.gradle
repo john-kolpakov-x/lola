@@ -1,2 +1,34 @@
 
-dependencies {}
+eclipse {
+  project {
+    natures 'com.google.gwt.eclipse.core.gwtNature'
+    buildCommand 'com.google.gdt.eclipse.core.webAppProjectValidator'
+    buildCommand 'com.google.gwt.eclipse.core.gwtProjectValidator'
+  }
+  classpath {
+    containers 'com.google.gwt.eclipse.core.GWT_CONTAINER'
+  }
+}
+
+dependencies {
+  compile "com.google.gwt:gwt-user:${gwtVersion}"
+  compile "com.google.gwt:gwt-dev:${gwtVersion}"
+  
+  // Needed for GWT compile and at runtime for RequestBuilder
+  // Specify two artifacts as workaround for GRADLE-1934
+  compile('javax.validation:validation-api:1.0.0.GA') { 
+    artifact {
+      name = 'validation-api'
+      type = 'jar'
+    }
+    artifact {
+      name = 'validation-api'
+      type = 'jar'
+      classifier = 'sources'
+    }
+  }
+  
+  // Runtime GWT libraries, should be included in WAR
+  runtime "com.google.gwt:gwt-servlet:${gwtVersion}"
+  runtime 'org.json:json:20090211'
+}

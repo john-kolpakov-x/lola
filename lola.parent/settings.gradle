@@ -1,2 +1,2 @@
 
-include 'lola.db'
+include 'lola.db', 'lola.client', 'lola.stand'

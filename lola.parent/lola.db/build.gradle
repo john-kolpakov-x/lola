@@ -1,0 +1,7 @@
+
+dependencies {
+  
+  compile 'org.easytesting:fest-assert:1.4'
+  testCompile 'org.testng:testng:6.1.1'
+  
+}

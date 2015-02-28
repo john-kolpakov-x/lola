@@ -10,7 +10,8 @@ subprojects {
   repositories {
     maven {
       //url "http://mirrors.ibiblio.org/maven2/"
-      url "http://maven.antelink.com/content/repositories/central/"
+      //url "http://maven.antelink.com/content/repositories/central/"
+      url 'http://localhost:8080/repository/internal/'
     }
     //mavenCentral()
   }

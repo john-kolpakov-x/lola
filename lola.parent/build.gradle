@@ -1,9 +1,11 @@
 
-subprojects {
-  
+allprojects {
   apply plugin: 'java'
   apply plugin: 'maven'
   apply plugin: 'eclipse'
+}
+
+subprojects {
   
   version = '0.0.2'
   

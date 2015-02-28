@@ -4,3 +4,4 @@ build
 bin
 .gradle
 gwt-unitCache
+.project

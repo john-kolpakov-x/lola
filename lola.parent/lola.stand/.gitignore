@@ -5,3 +5,4 @@ bin
 .gradle
 gwt-unitCache
 .project
+test-output

@@ -1,5 +1,5 @@
 <module>
   <inherits name='com.google.gwt.user.User' />
   <inherits name='kz.pompei.lola.share.Share' />
-  <source path='impl' />
+  <source path='src' />
 </module>

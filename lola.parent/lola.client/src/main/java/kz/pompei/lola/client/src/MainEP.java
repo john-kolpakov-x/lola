@@ -1,4 +1,4 @@
-package kz.pompei.lola.client.impl;
+package kz.pompei.lola.client.src;
 
 import com.google.gwt.core.client.EntryPoint;
 

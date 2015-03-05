@@ -1,5 +1,7 @@
 
 dependencies {
+  compile project(':lola.share')
+  
   compile "com.google.gwt:gwt-user:${gwtVersion}"
   compile 'com.google.gwt.inject:gin:2.1.2'
 }

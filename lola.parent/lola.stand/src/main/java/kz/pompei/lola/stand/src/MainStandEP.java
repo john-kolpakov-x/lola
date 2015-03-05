@@ -1,6 +1,6 @@
-package kz.pompei.lola.stand.impl;
+package kz.pompei.lola.stand.src;
 
-import kz.pompei.lola.client.impl.ShowHelloWorld;
+import kz.pompei.lola.client.src.ShowHelloWorld;
 
 import com.google.gwt.core.client.EntryPoint;
 

@@ -1,2 +1,4 @@
 
-dependencies {}
+dependencies {
+  compile "com.google.gwt:gwt-user:${gwtVersion}"
+}

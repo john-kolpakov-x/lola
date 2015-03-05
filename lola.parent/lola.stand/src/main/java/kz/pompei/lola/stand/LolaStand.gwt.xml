@@ -1,5 +1,5 @@
 <module>
-  <inherits name='kz.pompei.lola.client.MainLib' />
+  <inherits name='kz.pompei.lola.stand.LolaStandLib' />
   <source path='src' />
   <entry-point class='kz.pompei.lola.stand.src.MainStandEP' />
 </module>

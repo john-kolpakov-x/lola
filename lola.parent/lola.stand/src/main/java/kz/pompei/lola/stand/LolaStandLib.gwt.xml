@@ -1,0 +1,4 @@
+<module>
+  <inherits name='kz.pompei.lola.client.MainLib' />
+  <source path='src' />
+</module>

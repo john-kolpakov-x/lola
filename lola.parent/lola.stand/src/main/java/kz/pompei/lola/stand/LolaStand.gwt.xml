@@ -1,9 +1,5 @@
 <module>
   <inherits name='kz.pompei.lola.client.MainLib' />
-
   <source path='impl' />
-
   <entry-point class='kz.pompei.lola.stand.impl.MainStandEP' />
-
-  <add-linker name="xsiframe" />
 </module>

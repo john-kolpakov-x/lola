@@ -4,14 +4,15 @@ allprojects {
   apply plugin: 'maven'
   apply plugin: 'eclipse'
   
+  version = '0.0.2'
+  sourceCompatibility = '1.7'
+  
   eclipse.project {
     natures 'org.springsource.ide.eclipse.gradle.core.nature'
   }
 }
 
 subprojects {
-  
-  version = '0.0.2'
   
   repositories {
     maven {
@@ -21,8 +22,6 @@ subprojects {
     }
     //mavenCentral()
   }
-  
-  sourceCompatibility = '1.7'
   
   sourceSets {
     main {

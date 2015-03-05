@@ -1,7 +1,4 @@
 <module>
   <inherits name='kz.pompei.lola.client.MainLib' />
-
   <entry-point class='kz.pompei.lola.client.impl.MainEP' />
-
-  <add-linker name="xsiframe" />
 </module>

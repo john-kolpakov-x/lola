@@ -1,5 +1,9 @@
 <module>
   <inherits name='com.google.gwt.user.User' />
+
+  <inherits name="com.google.gwt.inject.Inject" />
+
   <inherits name='kz.pompei.lola.share.Share' />
+
   <source path='src' />
 </module>

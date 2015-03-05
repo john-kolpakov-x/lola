@@ -1,4 +1,4 @@
-package kz.pompei.lola.share.src.remote;
+package kz.pompei.lola.share.src.util;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 

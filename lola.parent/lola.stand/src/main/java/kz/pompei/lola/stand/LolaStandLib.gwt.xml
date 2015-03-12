@@ -1,4 +1,9 @@
 <module>
   <inherits name='kz.pompei.lola.client.MainLib' />
   <source path='src' />
+
+  <generate-with class="kz.pompei.lola.stand.src.TestGenerator">
+    <when-type-assignable class="kz.pompei.lola.stand.src.IfaceForGen" />
+  </generate-with>
+
 </module>

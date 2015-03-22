@@ -11,4 +11,6 @@ import java.lang.annotation.Target;
 @Documented
 public @interface Bob {
   boolean required() default true;
+  
+  String value() default "";
 }

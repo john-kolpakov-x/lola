@@ -197,15 +197,17 @@ public class ModelLoader {
     needIds.add(bobId);
     
     String get = "";
+    String conv = "(" + Autoget.class.getName() + ")";
     
     String retTypeStr = retType.toString();
     if (retType instanceof Class) {
       retTypeStr = ((Class<?>)retType).getName();
       get = ".get()";
+      conv = "";
     }
     
-    out.println("@Override " + retTypeStr + " " + m.getName() + "(){");
-    out.println("  return " + idGetterMap.get(bobId) + get + ";");
+    out.println("@Override public " + retTypeStr + " " + m.getName() + "(){");
+    out.println("  return " + conv + idGetterMap.get(bobId) + get + ";");
     out.println("}");
     out.println();
     
@@ -242,10 +244,12 @@ public class ModelLoader {
     out.println("private " + Autoget.class.getName() + "<" + cl.getName() + "> " + getterName);
     out.println("  = new " + Autoget.class.getName() + "<" + cl.getName() + ">(){");
     out.println("    " + cl.getName() + " " + cachedValue + " = null;");
-    out.println("    @Override " + cl.getName() + " get() {");
+    out.println("    @Override public " + cl.getName() + " get() {");
     out.println("      if (" + cachedValue + " != null) return " + cachedValue + ";");
     out.println("      " + cl.getName() + " ret = new " + cl.getName() + "();");
     out.println();
+    
+    String conv = "(" + Autoget.class.getName() + ")";
     
     for (Field field : cl.getFields()) {
       Type type = field.getGenericType();
@@ -256,7 +260,7 @@ public class ModelLoader {
           String fieldBobId = findOneBobIdOrFail(type, field);
           needIds.add(fieldBobId);
           String fieldGetter = idGetterMap.get(fieldBobId);
-          out.println("      ret." + field.getName() + " = " + fieldGetter + ";");
+          out.println("      ret." + field.getName() + " = " + conv + fieldGetter + ";");
           out.println();
         }
       }

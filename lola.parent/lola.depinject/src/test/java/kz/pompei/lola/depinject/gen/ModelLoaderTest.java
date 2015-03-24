@@ -2,6 +2,8 @@ package kz.pompei.lola.depinject.gen;
 
 import static org.fest.assertions.Assertions.assertThat;
 
+import java.io.File;
+import java.io.PrintStream;
 import java.util.Map.Entry;
 
 import kz.pompei.lola.depinject.gen.example.AsdTestContext;
@@ -94,5 +96,12 @@ public class ModelLoaderTest {
     System.out.println("-----------------------------------------------");
     loader.printClassContent(new StrPrintStream(System.out));
     System.out.println("-----------------------------------------------");
+    
+    try (PrintStream ps = new PrintStream(new File("src/test/java/Asd.java"))) {
+      ps.println("@SuppressWarnings({ \"unchecked\", \"rawtypes\" })");
+      ps.println("public class Asd implements " + AsdTestContext.class.getName() + " {");
+      loader.printClassContent(new StrPrintStream(ps));
+      ps.println("}");
+    }
   }
 }
